@@ -13,7 +13,7 @@ vector<int> solution(vector<int> answers) {
     vector<int> playerA {1, 2, 3, 4, 5};                //5
     vector<int> playerB {2, 1, 2, 3, 2, 4, 2, 5};       //8
     vector<int> playerC {3, 3, 1, 1, 2, 2, 4, 4, 5, 5}; //10
-    int keya=0,keyb=0,keyc=0;
+    int keya=0,keyb=0,keyc=0,temp;
     for(int i=0; i<answers.size();i++){
         if (answers[i] == playerA[i%5])
             keya++;
@@ -22,6 +22,8 @@ vector<int> solution(vector<int> answers) {
         if(answers[i] == playerC[i%10])
             keyc++;
     }
+    
+    temp = max(max(keya, keyb), keyc);
 
     if(keya==temp) answer.push_back(1);
     if(keyb==temp) answer.push_back(2);
