@@ -6,3 +6,5 @@ def solution(left, right):
         else:
             answer += i
     return answer
+
+
