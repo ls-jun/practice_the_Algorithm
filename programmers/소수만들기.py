@@ -1,6 +1,6 @@
 def solution(nums):
     answer = 0
-    temp = []
+    temp = [] 
     for i in range(0,len(nums)):
         if len(nums) == i+2: break
         for j in range(i+1,len(nums)):
